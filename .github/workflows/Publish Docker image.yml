@@ -1,9 +1,9 @@
 name: Publish Docker image
 on:
   workflow_dispatch:
-  release:
-    types:
-      - published
+  push:
+    tags:
+      - "v*"
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository_owner }}/xrayr
@@ -16,7 +16,6 @@ jobs:
       matrix:
         platform:
           - linux/amd64
-          - linux/arm64
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -25,6 +24,10 @@ jobs:
         uses: docker/metadata-action@v6
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=tag
+            type=match,pattern=^(v[0-9]+\.[0-9]+\.[0-9]+)-.*,group=1
+            type=raw,value=latest
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v4
       - name: Set up Docker Buildx
@@ -73,6 +76,10 @@ jobs:
         uses: docker/metadata-action@v6
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=tag
+            type=match,pattern=^(v[0-9]+\.[0-9]+\.[0-9]+)-.*,group=1
+            type=raw,value=latest
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v4
         with:
