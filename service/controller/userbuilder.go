@@ -1,14 +1,14 @@
 package controller
 
 import (
+	"context"
 	"encoding/base64"
 	"fmt"
 	"strings"
 
 	"github.com/sagernet/sing-shadowsocks/shadowaead_2022"
 	C "github.com/sagernet/sing/common"
-	log "github.com/sirupsen/logrus"
-	"github.com/wyx2685/XrayR/api"
+	"github.com/xtls/xray-core/common/errors"
 	"github.com/xtls/xray-core/common/protocol"
 	"github.com/xtls/xray-core/common/serial"
 	"github.com/xtls/xray-core/infra/conf"
@@ -16,6 +16,8 @@ import (
 	"github.com/xtls/xray-core/proxy/shadowsocks_2022"
 	"github.com/xtls/xray-core/proxy/trojan"
 	"github.com/xtls/xray-core/proxy/vless"
+
+	"github.com/wyx2685/XrayR/api"
 )
 
 var AEADMethod = map[shadowsocks.CipherType]uint8{
@@ -81,14 +83,14 @@ func (c *Controller) buildSSUser(userInfo *[]api.UserInfo, method string) (users
 			e := c.buildUserTag(&user)
 			userKey, err := c.checkShadowsocksPassword(user.Passwd, method)
 			if err != nil {
-				log.Error(fmt.Errorf("[UID: %d] %s", user.UID, err))
+				errors.LogError(context.Background(), "[UID: %d] %s", user.UID, err)
 				continue
 			}
 			users[i] = &protocol.User{
 				Level: 0,
 				Email: e,
 				Account: serial.ToTypedMessage(&shadowsocks_2022.Account{
-					Key: userKey,
+					Key:   userKey,
 				}),
 			}
 		} else {
@@ -114,14 +116,14 @@ func (c *Controller) buildSSPluginUser(userInfo *[]api.UserInfo) (users []*proto
 			e := c.buildUserTag(&user)
 			userKey, err := c.checkShadowsocksPassword(user.Passwd, user.Method)
 			if err != nil {
-				log.Error(fmt.Errorf("[UID: %d] %s", user.UID, err))
+				errors.LogError(context.Background(), "[UID: %d] %s", user.UID, err)
 				continue
 			}
 			users[i] = &protocol.User{
 				Level: 0,
 				Email: e,
 				Account: serial.ToTypedMessage(&shadowsocks_2022.Account{
-					Key: userKey,
+					Key:   userKey,
 				}),
 			}
 		} else {
