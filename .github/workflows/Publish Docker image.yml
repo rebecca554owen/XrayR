@@ -26,8 +26,6 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             type=ref,event=tag
-            type=match,pattern=^(v[0-9]+\.[0-9]+\.[0-9]+)-.*,group=1
-            type=raw,value=latest
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v4
       - name: Set up Docker Buildx
@@ -78,8 +76,6 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             type=ref,event=tag
-            type=match,pattern=^(v[0-9]+\.[0-9]+\.[0-9]+)-.*,group=1
-            type=raw,value=latest
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v4
         with:

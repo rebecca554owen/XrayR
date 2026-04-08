@@ -2,11 +2,11 @@
 
 [![](https://img.shields.io/badge/TgChat-@XrayR讨论-blue.svg)](https://t.me/XrayR_project)
 [![](https://img.shields.io/badge/Channel-@XrayR通知-blue.svg)](https://t.me/XrayR_channel)
-![](https://img.shields.io/github/stars/wyx2685/XrayR)
-![](https://img.shields.io/github/forks/wyx2685/XrayR)
+![](https://img.shields.io/github/stars/rebecca554owen/XrayR)
+![](https://img.shields.io/github/forks/rebecca554owen/XrayR)
 ![](https://github.com/rebecca554owen/XrayR/actions/workflows/release.yml/badge.svg)
 ![](https://github.com/rebecca554owen/XrayR/actions/workflows/docker.yml/badge.svg)
-[![Github All Releases](https://img.shields.io/github/downloads/wyx2685/XrayR/total.svg)]()
+[![Github All Releases](https://img.shields.io/github/downloads/rebecca554owen/XrayR/total.svg)]()
 
 [Iranian(farsi) README](https://github.com/rebecca554owen/XrayR/blob/master/README_Fa.md), [Vietnamese(vi) README](https://github.com/rebecca554owen/XrayR/blob/master/README-vi.md), [English(en) README](https://github.com/rebecca554owen/XrayR/blob/master/README-en.md)
 
@@ -68,7 +68,7 @@ Dự án này chỉ là học tập và phát triển và bảo trì cá nhân c
 ### Một cài đặt chính
 
 ```
-wget -N https://raw.githubusercontent.com/wyx2685/XrayR-release/master/install.sh && bash install.sh
+wget -N https://raw.githubusercontent.com/rebecca554owen/XrayR-release/master/install.sh && bash install.sh
 ```
 
 
@@ -99,5 +99,5 @@ wget -N https://raw.githubusercontent.com/wyx2685/XrayR-release/master/install.s
 
 ## Stargazers over time
 
-[![Stargazers over time](https://starchart.cc/wyx2685/XrayR.svg)](https://starchart.cc/wyx2685/XrayR)
+[![Stargazers over time](https://starchart.cc/rebecca554owen/XrayR.svg)](https://starchart.cc/rebecca554owen/XrayR)
 
