@@ -1,6 +1,6 @@
 package panel
 
-import "github.com/wyx2685/XrayR/service/controller"
+import "github.com/rebecca554owen/XrayR/service/controller"
 
 func getDefaultLogConfig() *LogConfig {
 	return &LogConfig{
@@ -28,3 +28,4 @@ func getDefaultControllerConfig() *controller.Config {
 		DNSType:        "AsIs",
 	}
 }
+

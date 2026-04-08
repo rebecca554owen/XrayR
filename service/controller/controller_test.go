@@ -8,14 +8,16 @@ import (
 	"syscall"
 	"testing"
 
+	"github.com/xtls/xray-core/common/serial"
 	"github.com/xtls/xray-core/core"
 	"github.com/xtls/xray-core/infra/conf"
 
-	"github.com/wyx2685/XrayR/api"
-	"github.com/wyx2685/XrayR/api/sspanel"
-	_ "github.com/wyx2685/XrayR/cmd/distro/all"
-	"github.com/wyx2685/XrayR/common/mylego"
-	. "github.com/wyx2685/XrayR/service/controller"
+	"github.com/rebecca554owen/XrayR/api"
+	"github.com/rebecca554owen/XrayR/api/sspanel"
+	"github.com/rebecca554owen/XrayR/app/mydispatcher"
+	_ "github.com/rebecca554owen/XrayR/cmd/distro/all"
+	"github.com/rebecca554owen/XrayR/common/mylego"
+	. "github.com/rebecca554owen/XrayR/service/controller"
 )
 
 func TestController(t *testing.T) {
@@ -30,6 +32,7 @@ func TestController(t *testing.T) {
 	}}
 	serverConfig.Policy = policyConfig
 	config, _ := serverConfig.Build()
+	config.App = append([]*serial.TypedMessage{serial.ToTypedMessage(&mydispatcher.Config{})}, config.App...)
 
 	// config := &core.Config{
 	// 	App: []*serial.TypedMessage{
@@ -79,3 +82,4 @@ func TestController(t *testing.T) {
 		<-osSignals
 	}
 }
+

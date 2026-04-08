@@ -3,8 +3,8 @@ package bunpanel_test
 import (
 	"testing"
 
-	"github.com/wyx2685/XrayR/api"
-	"github.com/wyx2685/XrayR/api/bunpanel"
+	"github.com/rebecca554owen/XrayR/api"
+	"github.com/rebecca554owen/XrayR/api/bunpanel"
 )
 
 func CreateClient() api.API {
@@ -99,3 +99,4 @@ func TestGetNodeRule(t *testing.T) {
 
 	t.Log(ruleList)
 }
+

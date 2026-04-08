@@ -3,8 +3,8 @@ package gov2panel_test
 import (
 	"testing"
 
-	"github.com/wyx2685/XrayR/api"
-	"github.com/wyx2685/XrayR/api/gov2panel"
+	"github.com/rebecca554owen/XrayR/api"
+	"github.com/rebecca554owen/XrayR/api/gov2panel"
 	"github.com/gogf/gf/v2/encoding/gjson"
 	"github.com/gogf/gf/v2/util/gconv"
 )
@@ -81,3 +81,4 @@ func TestGetNodeRule(t *testing.T) {
 
 	t.Log(ruleList)
 }
+

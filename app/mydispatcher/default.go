@@ -27,8 +27,8 @@ import (
 	"github.com/xtls/xray-core/transport"
 	"github.com/xtls/xray-core/transport/pipe"
 
-	"github.com/wyx2685/XrayR/common/limiter"
-	"github.com/wyx2685/XrayR/common/rule"
+	"github.com/rebecca554owen/XrayR/common/limiter"
+	"github.com/rebecca554owen/XrayR/common/rule"
 )
 
 var errSniffingTimeout = newError("timeout on sniffing")
@@ -424,10 +424,8 @@ func sniffer(ctx context.Context, cReader *cachedReader, metadataOnly bool, netw
 }
 
 func (d *DefaultDispatcher) routedDispatch(ctx context.Context, link *transport.Link, destination net.Destination) {
-	// Note: dns.HostsLookup interface has been removed in Xray-core v25.10.15
-	// The hosts lookup functionality is now handled internally by the DNS client
-	// Previous code for hosts lookup has been removed to maintain compatibility
-	// with the new Xray-core version
+	outbounds := session.OutboundsFromContext(ctx)
+	ob := outbounds[len(outbounds)-1]
 
 	var handler outbound.Handler
 
@@ -508,3 +506,4 @@ func (d *DefaultDispatcher) routedDispatch(ctx context.Context, link *transport.
 
 	handler.Dispatch(ctx, link)
 }
+

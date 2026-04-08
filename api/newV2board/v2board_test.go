@@ -3,8 +3,8 @@ package newV2board_test
 import (
 	"testing"
 
-	"github.com/wyx2685/XrayR/api"
-	"github.com/wyx2685/XrayR/api/newV2board"
+	"github.com/rebecca554owen/XrayR/api"
+	"github.com/rebecca554owen/XrayR/api/newV2board"
 )
 
 func CreateClient() api.API {
@@ -99,3 +99,4 @@ func TestGetNodeRule(t *testing.T) {
 
 	t.Log(ruleList)
 }
+

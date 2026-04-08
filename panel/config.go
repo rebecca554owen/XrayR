@@ -1,8 +1,8 @@
 package panel
 
 import (
-	"github.com/wyx2685/XrayR/api"
-	"github.com/wyx2685/XrayR/service/controller"
+	"github.com/rebecca554owen/XrayR/api"
+	"github.com/rebecca554owen/XrayR/service/controller"
 )
 
 type Config struct {
@@ -34,3 +34,4 @@ type ConnectionConfig struct {
 	DownlinkOnly uint32 `mapstructure:"downlinkOnly"`
 	BufferSize   int32  `mapstructure:"bufferSize"`
 }
+

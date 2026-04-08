@@ -14,8 +14,8 @@ import (
 	"github.com/xtls/xray-core/proxy"
 	"github.com/xtls/xray-core/transport"
 
-	"github.com/wyx2685/XrayR/api"
-	"github.com/wyx2685/XrayR/common/limiter"
+	"github.com/rebecca554owen/XrayR/api"
+	"github.com/rebecca554owen/XrayR/common/limiter"
 )
 
 func (c *Controller) removeInbound(tag string) error {
@@ -188,3 +188,4 @@ func (c *Controller) UpdateRule(tag string, newRuleList []api.DetectRule) error 
 func (c *Controller) GetDetectResult(tag string) (*[]api.DetectResult, error) {
 	return c.dispatcher.RuleManager.GetDetectResult(tag)
 }
+

@@ -19,7 +19,7 @@ import (
 	"github.com/sagernet/sing-shadowsocks/shadowaead_2022"
 	C "github.com/sagernet/sing/common"
 
-	"github.com/wyx2685/XrayR/api"
+	"github.com/rebecca554owen/XrayR/api"
 )
 
 // APIClient create an api client to the panel.
@@ -544,3 +544,4 @@ func (c *APIClient) ParseV2rayNodeResponse(nodeInfoResponse *simplejson.Json) (*
 	}
 	return nodeInfo, nil
 }
+

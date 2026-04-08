@@ -2,7 +2,7 @@ package main
 
 import (
 	log "github.com/sirupsen/logrus"
-	"github.com/wyx2685/XrayR/cmd"
+	"github.com/rebecca554owen/XrayR/cmd"
 )
 
 func main() {
@@ -10,3 +10,4 @@ func main() {
 		log.Fatal(err)
 	}
 }
+

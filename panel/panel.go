@@ -6,10 +6,10 @@ import (
 	"os"
 	"sync"
 
-	"github.com/wyx2685/XrayR/api/bunpanel"
-	"github.com/wyx2685/XrayR/api/gov2panel"
-	"github.com/wyx2685/XrayR/api/newV2board"
-	"github.com/wyx2685/XrayR/app/mydispatcher"
+	"github.com/rebecca554owen/XrayR/api/bunpanel"
+	"github.com/rebecca554owen/XrayR/api/gov2panel"
+	"github.com/rebecca554owen/XrayR/api/newV2board"
+	"github.com/rebecca554owen/XrayR/app/mydispatcher"
 
 	"dario.cat/mergo"
 	"github.com/r3labs/diff/v2"
@@ -19,14 +19,14 @@ import (
 	"github.com/xtls/xray-core/core"
 	"github.com/xtls/xray-core/infra/conf"
 
-	"github.com/wyx2685/XrayR/api"
-	"github.com/wyx2685/XrayR/api/pmpanel"
-	"github.com/wyx2685/XrayR/api/proxypanel"
-	"github.com/wyx2685/XrayR/api/sspanel"
-	"github.com/wyx2685/XrayR/api/v2raysocks"
-	_ "github.com/wyx2685/XrayR/cmd/distro/all"
-	"github.com/wyx2685/XrayR/service"
-	"github.com/wyx2685/XrayR/service/controller"
+	"github.com/rebecca554owen/XrayR/api"
+	"github.com/rebecca554owen/XrayR/api/pmpanel"
+	"github.com/rebecca554owen/XrayR/api/proxypanel"
+	"github.com/rebecca554owen/XrayR/api/sspanel"
+	"github.com/rebecca554owen/XrayR/api/v2raysocks"
+	_ "github.com/rebecca554owen/XrayR/cmd/distro/all"
+	"github.com/rebecca554owen/XrayR/service"
+	"github.com/rebecca554owen/XrayR/service/controller"
 )
 
 // Panel Structure
@@ -252,3 +252,4 @@ func parseConnectionConfig(c *ConnectionConfig) (policy *conf.Policy) {
 
 	return
 }
+

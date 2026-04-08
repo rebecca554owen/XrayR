@@ -15,8 +15,8 @@ import (
 	"github.com/xtls/xray-core/core"
 	"github.com/xtls/xray-core/infra/conf"
 
-	"github.com/wyx2685/XrayR/api"
-	"github.com/wyx2685/XrayR/common/mylego"
+	"github.com/rebecca554owen/XrayR/api"
+	"github.com/rebecca554owen/XrayR/common/mylego"
 )
 
 // InboundBuilder build Inbound config for different protocol
@@ -119,10 +119,6 @@ func InboundBuilder(config *Config, nodeInfo *api.NodeInfo, tag string) (*core.I
 		}
 
 		proxySetting.NetworkList = &conf.NetworkList{"tcp", "udp"}
-		proxySetting.IVCheck = true
-		if config.DisableIVCheck {
-			proxySetting.IVCheck = false
-		}
 
 	case "dokodemo-door":
 		protocol = "dokodemo-door"
@@ -350,3 +346,4 @@ func buildTrojanFallbacks(fallbackConfigs []*FallBackConfig) ([]*conf.TrojanInbo
 	}
 	return trojanFallBacks, nil
 }
+

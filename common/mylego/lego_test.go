@@ -3,7 +3,7 @@ package mylego_test
 import (
 	"testing"
 
-	"github.com/wyx2685/XrayR/common/mylego"
+	"github.com/rebecca554owen/XrayR/common/mylego"
 )
 
 func TestLegoClient(t *testing.T) {
@@ -85,3 +85,4 @@ func TestLegoRenewCert(t *testing.T) {
 	t.Log(keyPath)
 	t.Log(ok)
 }
+

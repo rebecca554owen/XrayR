@@ -10,7 +10,7 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/wyx2685/XrayR/api"
+	"github.com/rebecca554owen/XrayR/api"
 	"github.com/gogf/gf/v2/encoding/gjson"
 	"github.com/gogf/gf/v2/frame/g"
 	"github.com/gogf/gf/v2/net/gclient"
@@ -327,3 +327,4 @@ func (c *APIClient) sendRequest(headerM map[string]string, method string, url st
 
 	return
 }
+

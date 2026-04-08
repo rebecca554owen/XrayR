@@ -17,7 +17,7 @@ import (
 
 	"github.com/go-resty/resty/v2"
 
-	"github.com/wyx2685/XrayR/api"
+	"github.com/rebecca554owen/XrayR/api"
 )
 
 var (
@@ -858,3 +858,4 @@ func compareVersion(version1, version2 string) int {
 	}
 	return 0
 }
+

@@ -10,7 +10,7 @@ import (
 
 	mapset "github.com/deckarep/golang-set"
 	log "github.com/sirupsen/logrus"
-	"github.com/wyx2685/XrayR/api"
+	"github.com/rebecca554owen/XrayR/api"
 )
 
 type Manager struct {
@@ -81,3 +81,4 @@ func (r *Manager) Detect(tag string, destination string, email string) (reject b
 	}
 	return reject
 }
+

@@ -19,7 +19,7 @@ import (
 	"github.com/xtls/xray-core/common/net"
 	"github.com/xtls/xray-core/infra/conf"
 
-	"github.com/wyx2685/XrayR/api"
+	"github.com/rebecca554owen/XrayR/api"
 )
 
 // APIClient create an api client to the panel.
@@ -534,3 +534,4 @@ func (s *serverConfig) parseDNSConfig() (nameServerList []*conf.NameServerConfig
 
 	return
 }
+

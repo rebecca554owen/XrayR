@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/wyx2685/XrayR/api"
-	"github.com/wyx2685/XrayR/api/proxypanel"
+	"github.com/rebecca554owen/XrayR/api"
+	"github.com/rebecca554owen/XrayR/api/proxypanel"
 )
 
 func CreateClient() api.API {
@@ -163,3 +163,4 @@ func TestReportIllegal(t *testing.T) {
 		t.Error(err)
 	}
 }
+

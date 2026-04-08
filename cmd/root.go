@@ -16,7 +16,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/wyx2685/XrayR/panel"
+	"github.com/rebecca554owen/XrayR/panel"
 )
 
 var (
@@ -119,3 +119,4 @@ func run() error {
 func Execute() error {
 	return rootCmd.Execute()
 }
+

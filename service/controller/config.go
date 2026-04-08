@@ -1,8 +1,8 @@
 package controller
 
 import (
-	"github.com/wyx2685/XrayR/common/limiter"
-	"github.com/wyx2685/XrayR/common/mylego"
+	"github.com/rebecca554owen/XrayR/common/limiter"
+	"github.com/rebecca554owen/XrayR/common/mylego"
 )
 
 type Config struct {
@@ -53,3 +53,4 @@ type REALITYConfig struct {
 	MaxTimeDiff      uint64   `mapstructure:"MaxTimeDiff"`
 	ShortIds         []string `mapstructure:"ShortIds"`
 }
+
